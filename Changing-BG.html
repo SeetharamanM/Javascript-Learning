@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Back ground</title>
+</head>
+<body>
+    <h1 style="text-align: center"> DOM Random Background</h1>
+    <button onclick="changeColor();" style=" margin-left: 50%; margin-top: 10px; padding: 10px 20px; font-size: 20px; border-radius: 10px; background-color: rgb(255, 0, 0); color: white; cursor: pointer;">Change Background</button>
+    <script>
+        const genHexaColor=()=>{
+            let str='0123456789abcdef'
+            let hexa=''
+            for(let i=0; i<6; i++){
+                let index=Math.floor(Math.random()*str.length)
+                hexa=hexa+str[index]
+            }
+            
+            return '#'+hexa
+
+        }
+        function changeColor(){
+            document.body.style.background=genHexaColor()
+        }
+        /* const button= document.querySelector('button')
+        button.addEventListener('click', ()=>{
+            document.body.style.background=genHexaColor()
+
+        }) */
+
+        /* setInterval(()=>{
+            document.body.style.background=genHexaColor()
+        }, 3000) */
+
+    </script>
+    
+</body>
+
+</html>

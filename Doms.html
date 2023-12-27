@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 class="para">DOCUMENT OBJECT MODEL LESSION</h1>
+    <p class="para" id="para1">DOM is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.</p> 
+    <p class="para"> First let us learn getting element</p>
+    <p class="para">Then we will learn creating Elements</p>
+    <p>Then after we will learn setting attributes</p>
+    <script>
+        console.log(document.querySelector('#para1'))   
+    const paragraphs=document.getElementsByClassName('para')
+    for (let i=0;i<paragraphs.length;i++){
+        if (i%2==0) paragraphs[i].style.color='green'
+        else paragraphs[i].style.color='red'
+    }
+    </script>
+</body>
+</html>
